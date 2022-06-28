@@ -1,0 +1,5 @@
+Rules
+1. Name on application must match name on title.
+2. Name on title must be EXACT match name on license. (Ryan Reynold == Ryan Reynolds == FAIL, Ryan Reynolds == Ryan Reynolds == PASS) (if name_matching == true, but case_sensitive == false, then return "The name on the license does not match the spelling on the title, please upload proof of the spelling")
+3. License must not be expired. (if expired == true, then return "License is expired, please upload a new license")
+4. Applicant must be a title owner (if not, check all other homes on that street)

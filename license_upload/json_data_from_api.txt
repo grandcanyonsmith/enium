@@ -1,0 +1,439 @@
+
+# {
+#   "IdentityDocuments": [
+#     {
+#       "DocumentIndex": 1,
+#       "IdentityDocumentFields": [
+#         {
+#           "Type": {
+#             "Text": "FIRST_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "MARTY",
+#             "Confidence": 99.0773696899414
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "LAST_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "REHM",
+#             "Confidence": 98.24199676513672
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "MIDDLE_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "RAY",
+#             "Confidence": 99.3154525756836
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "SUFFIX"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.63410186767578
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "CITY_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "SANGER",
+#             "Confidence": 99.33561706542969
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ZIP_CODE_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "762660000",
+#             "Confidence": 67.83212280273438
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "STATE_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "TX",
+#             "Confidence": 98.79285430908203
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "STATE_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "TEXAS",
+#             "Confidence": 98.51205444335938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DOCUMENT_NUMBER"
+#           },
+#           "ValueDetection": {
+#             "Text": "12234153",
+#             "Confidence": 98.86832427978516
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "EXPIRATION_DATE"
+#           },
+#           "ValueDetection": {
+#             "Text": "02/09/2025",
+#             "NormalizedValue": {
+#               "Value": "2025-02-09T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.8149185180664
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DATE_OF_BIRTH"
+#           },
+#           "ValueDetection": {
+#             "Text": "02/09/1974",
+#             "NormalizedValue": {
+#               "Value": "1974-02-09T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.62777709960938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DATE_OF_ISSUE"
+#           },
+#           "ValueDetection": {
+#             "Text": "03/08/2019",
+#             "NormalizedValue": {
+#               "Value": "2019-03-08T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.78228759765625
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ID_TYPE"
+#           },
+#           "ValueDetection": {
+#             "Text": "DRIVER LICENSE FRONT",
+#             "Confidence": 98.97590637207031
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ENDORSEMENTS"
+#           },
+#           "ValueDetection": {
+#             "Text": "NONE",
+#             "Confidence": 99.53218841552734
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "VETERAN"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.65486907958984
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "RESTRICTIONS"
+#           },
+#           "ValueDetection": {
+#             "Text": "NONE",
+#             "Confidence": 99.11326599121094
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "CLASS"
+#           },
+#           "ValueDetection": {
+#             "Text": "C",
+#             "Confidence": 98.71615600585938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "604 S KEATON ROAD",
+#             "Confidence": 97.45263671875
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "COUNTY"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.55098724365234
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "PLACE_OF_BIRTH"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.6314926147461
+#           }
+#         }
+#       ]
+#     }
+#   ],
+#   "DocumentMetadata": {
+#     "Pages": 1
+#   },
+#   "AnalyzeIDModelVersion": "1.0",
+#   "ResponseMetadata": {
+#     "RequestId": "359a4ce1-b2de-4b8d-8d55-87079e565e65",
+#     "HTTPStatusCode": 200,
+#     "HTTPHeaders": {
+#       "x-amzn-requestid": "359a4ce1-b2de-4b8d-8d55-87079e565e65",
+#       "content-type": "application/x-amz-json-1.1",
+#       "content-length": "2291",
+#       "date": "Sat, 11 Jun 2022 23:03:52 GMT"
+#     },
+#     "RetryAttempts": 0
+#   }
+# }
+# (venv)  canyonsmith@Canyons-MBP  ~/Desktop/code_to_organize_later/enium   main ±  {
+#   "IdentityDocuments": [
+#     {
+#       "DocumentIndex": 1,
+#       "IdentityDocumentFields": [
+#         {
+#           "Type": {
+#             "Text": "FIRST_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "MARTY",
+#             "Confidence": 99.0773696899414
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "LAST_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "REHM",
+#             "Confidence": 98.24199676513672
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "MIDDLE_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "RAY",
+#             "Confidence": 99.3154525756836
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "SUFFIX"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.63410186767578
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "CITY_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "SANGER",
+#             "Confidence": 99.33561706542969
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ZIP_CODE_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "762660000",
+#             "Confidence": 67.83212280273438
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "STATE_IN_ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "TX",
+#             "Confidence": 98.79285430908203
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "STATE_NAME"
+#           },
+#           "ValueDetection": {
+#             "Text": "TEXAS",
+#             "Confidence": 98.51205444335938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DOCUMENT_NUMBER"
+#           },
+#           "ValueDetection": {
+#             "Text": "12234153",
+#             "Confidence": 98.86832427978516
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "EXPIRATION_DATE"
+#           },
+#           "ValueDetection": {
+#             "Text": "02/09/2025",
+#             "NormalizedValue": {
+#               "Value": "2025-02-09T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.8149185180664
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DATE_OF_BIRTH"
+#           },
+#           "ValueDetection": {
+#             "Text": "02/09/1974",
+#             "NormalizedValue": {
+#               "Value": "1974-02-09T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.62777709960938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "DATE_OF_ISSUE"
+#           },
+#           "ValueDetection": {
+#             "Text": "03/08/2019",
+#             "NormalizedValue": {
+#               "Value": "2019-03-08T00:00:00",
+#               "ValueType": "Date"
+#             },
+#             "Confidence": 98.78228759765625
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ID_TYPE"
+#           },
+#           "ValueDetection": {
+#             "Text": "DRIVER LICENSE FRONT",
+#             "Confidence": 98.97590637207031
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ENDORSEMENTS"
+#           },
+#           "ValueDetection": {
+#             "Text": "NONE",
+#             "Confidence": 99.53218841552734
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "VETERAN"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.65486907958984
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "RESTRICTIONS"
+#           },
+#           "ValueDetection": {
+#             "Text": "NONE",
+#             "Confidence": 99.11326599121094
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "CLASS"
+#           },
+#           "ValueDetection": {
+#             "Text": "C",
+#             "Confidence": 98.71615600585938
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "ADDRESS"
+#           },
+#           "ValueDetection": {
+#             "Text": "604 S KEATON ROAD",
+#             "Confidence": 97.45263671875
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "COUNTY"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.55098724365234
+#           }
+#         },
+#         {
+#           "Type": {
+#             "Text": "PLACE_OF_BIRTH"
+#           },
+#           "ValueDetection": {
+#             "Text": "",
+#             "Confidence": 99.6314926147461
+#           }
+#         }
+#       ]
+#     }
+#   ],
+#   "DocumentMetadata": {
+#     "Pages": 1
+#   },
+#   "AnalyzeIDModelVersion": "1.0",
+#   "ResponseMetadata": {
+#     "RequestId": "359a4ce1-b2de-4b8d-8d55-87079e565e65",
+#     "HTTPStatusCode": 200,
+#     "HTTPHeaders": {
+#       "x-amzn-requestid": "359a4ce1-b2de-4b8d-8d55-87079e565e65",
+#       "content-type": "application/x-amz-json-1.1",
+#       "content-length": "2291",
+#       "date": "Sat, 11 Jun 2022 23:03:52 GMT"
+#     },
+#     "RetryAttempts": 0
+#   }
+    # }
+
+analyze_ID()
+
+
+
+# [{'_id': 'jyw1HOg6ytHxg2P', 'address': {'oldHashes': ['2ddb6ff094864854468e18a2e87a7bf4', '2537554dad50bbd2aca2ef7cda5b2330'], 'houseNumber': '3008', 'street': '3008 43rd Ave E', 'city': 'Bradenton', 'county': 'Manatee', 'state': 'FL', 'zip': '34208', 'zipPlus4': '7377', 'localities': ['bradenton'], 'hash': '2537554dad50bbd2aca2ef7cda5b2330', 'latitude': 27.461936, 'longitude': -82.5248805, 'normalized': True, 'countyFipsCode': '12081', 'formattedStreet': '43rd Ave E', 'streetNoUnit': '3008 43rd Ave E', 'geoStatusCode': 'B', 'geoStatus': 'Rooftop'}, 'assessment': {'totalAssessedValue': 242375, 'assessmentYear': 2020, 'improvementMarketValue': 278301, 'landMarketValue': 30000, 'totalMarketValue': 308301, 'marketValueYear': 2020}, 'building': {'totalBuildingAreaSquareFeet': 2672, 'totalBuildingAreaCode': 'L', 'totalBuildingAreaCodeDescription': 'Living Area', 'groundFloorAreaSquareFeet': 1732, 'garageSquareFeet': 675, 'garageUnfinishedSquareFeet': 0, 'garageFinishedSquareFeet': 0, 'yearBuilt': 2004, 'effectiveYearBuilt': 2011, 'buildingCount': 1, 'unitCount': 1, 'bedroomCount': 4, 'calculatedBathroomCount': 3, 'fullBathroomCount': 3, 'bathroomCount': 3, 'bathFixtureCount': 14, 'storyCode': '200', 'storyCount': 2, 'storyCountDescription': '2 stories', 'garageParkingSpaceCount': 2, 'residentialUnitCount': 1, 'features': ['Air Conditioning', 'Central Air Conditioning', 'Garage', 'Attached Garage', 'Pool', 'Porch', 'Screened Porch'], 'airConditioningSourceCode': '1', 'airConditioningSource': 'Central', 'buildingConditionCode': '3', 'buildingCondition': 'Good', 'buildingQualityCode': '9', 'buildingQuality': 'C+', 'constructionTypeCode': '12', 'constructionType': 'Masonry', 'exteriorWallsCode': '12', 'exteriorWalls': 'Stucco', 'garageCode': '1', 'garage': 'Attached Garage', 'heatSourceCode': '3', 'heatSource': 'Central', 'heatingFuelTypeCode': '2', 'heatingFuelType': 'Electric', 'poolCode': '8', 'pool': 'Pool - Yes', 'porchCode': '4', 'porch': 'Porch screened', 'roofCoverCode': '3', 'roofCover': 'Composition Shingle', 'roofTypeCode': '7', 'roofType': 'Gable or Hip'}, 'demographics': {}, 'foreclosure': {}, 'general': {'primaryParcel': True, 'parcelCount': 1, 'vacant': False, 'mailingAddressVacant': False, 'standardizedLandUseCode': '1001', 'propertyTypeCategory': 'Residential', 'propertyTypeDetail': 'Single Family', 'congressionalDistrict': '16', 'timeZone': 'Eastern', 'utcOffset': -5, 'daylightSavingsTime': True, 'censusTract': '000803', 'schoolDistrict': 'Manatee County School District'}, 'ids': {'addressHash': '2537554dad50bbd2aca2ef7cda5b2330', 'apn': '15451.0730-9', 'oldApn': '1545107309', 'oldApnCode': 'A', 'oldApnCodeDescription': 'Alternate APN', 'fipsCode': '12081', 'personIds': []}, 'involuntaryLien': None, 'legal': {'assessorsMapReference': 'MAP 5CN08', 'legalDescription': 'LOT 46 HIGHLAND RIDGE PI#15451.0730/9', 'sectionTownshipRangeMeridian': 'SEC 08 TWN 35S RNG 18E', 'lotNumber': '46', 'cityTownshipMunicipality': 'Unincorporated', 'subdivisionName': 'HIGHLAND RIDGE PB39/55', 'tractNumber': 'HIGHLAND RIDGE PB39/55'}, 'lot': {'lotSizeAcres': 0.178, 'lotDepthFeet': 1100, 'lotFrontageFeet': 710, 'lotSizeSquareFeet': 7764, 'topographyCode': 'E', 'topography': 'Level grade', 'zoningCode': 'RSF-4.5 RE', 'estimatedLotSizeSquareFeet': 7764}, 'mls': {'brokerage': {}}, 'openLien': {}, 'owner': {'fullName': 'Rossi, Henry L; Rossi Henry L Trust', 'mailingAddress': {'oldHashes': [], 'houseNumber': '3008', 'street': '3008 43rd Ave E', 'city': 'Bradenton', 'county': 'Manatee', 'state': 'FL', 'zip': '34208', 'formattedStreet': '43rd Ave E', 'streetNoUnit': '3008 43rd Ave E', 'hash': '2537554dad50bbd2aca2ef7cda5b2330'}, 'names': [{'first': 'Henry', 'middle': 'L', 'last': 'Rossi', 'full': 'Rossi Henry L'}, {'first': 'Rossi Henry L Trust', 'full': 'Rossi Henry L Trust'}], 'ownerOccupied': True, 'ownerStatusType': 'Company Owned', 'lengthOfResidenceMonths': 105, 'ownershipStartDate': '2013-05-30T00:00:00.000Z'}, 'quickLists': {'absenteeOwner': False, 'absenteeOwnerInState': False, 'absenteeOwnerOutOfState': False, 'activeListing': False, 'activeAuction': False, 'bankruptcy': False, 'cashBuyer': False, 'corporateOwned': True, 'divorce': False, 'expiredListing': False, 'freeAndClear': True, 'highEquity': True, 'inherited': False, 'liens': False, 'listedBelowMarketPrice': False, 'lowEquity': False, 'mailingAddressVacant': False, 'noticeOfDefault': False, 'onMarket': False, 'outOfStateOwner': False, 'ownerOccupied': True, 'pendingListing': False, 'preforeclosure': False, 'recentlySold': False, 'samePropertyAndMailingAddress': True, 'taxDefault': False, 'tiredLandlord': False, 'unknownEquity': False, 'vacant': False, 'hasHoaFees': True}, 'sale': {'lastTransfer': {'saleBuyers': [], 'saleSellers': []}, 'lastSale': {'bookNumber': '2474', 'pageNumber': '5237', 'documentNumber': '2013.3156637', 'documentType': 'Warranty Deed', 'price': 275000, 'priceCodeDescription': 'Sales Price or Transfer Tax rounded by county prior to computation.', 'priceCode': '7', 'recordingDate': '2013-05-30T00:00:00.000Z', 'saleDate': '2013-05-24T00:00:00.000Z', 'saleBuyers': ['Rossi Henryl'], 'saleSellers': ['Internicola Joy A'], 'mortgages': [{'documentNumber': '2013.2474/5238', 'pageNumber': '5238', 'bookNumber': '2474', 'recordingDate': '2013-05-30T00:00:00.000Z', 'loanAmount': 200000, 'loanTypeCode': '20', 'loanType': 'New Conventional', 'financingTypeCode': None, 'financingType': None, 'interestRate': 3.42, 'dueDate': None, 'lenderName': 'BRANCH BANKING AND TRUST CO', 'loanTerm': '360'}, {'documentNumber': None, 'pageNumber': None, 'bookNumber': None, 'recordingDate': None, 'loanAmount': 0, 'loanTypeCode': None, 'loanType': None, 'financingTypeCode': None, 'financingType': None, 'interestRate': None, 'dueDate': None, 'lenderName': None, 'loanTerm': None}]}, 'priorTransfer': {'saleBuyers': [], 'saleSellers': []}, 'priorSale': {'bookNumber': '2240', 'pageNumber': '2611', 'documentNumber': '2007.2546865', 'documentType': 'Warranty Deed', 'price': 345000, 'priceCodeDescription': '7', 'recordingDate': '2007-12-21T00:00:00.000Z', 'saleDate': '2007-12-10T00:00:00.000Z', 'saleBuyers': ['Internicola Joy A', 'Internicola Philip G'], 'saleSellers': ['Coscia Edward', 'Coscia Shiela'], 'mortgages': [{'documentNumber': '2007.2240/02618', 'pageNumber': '2618', 'bookNumber': '2240', 'recordingDate': '2007-12-21T00:00:00.000Z', 'loanAmount': 275000, 'loanTypeCode': '22', 'loanType': 'Purchase Money Mortgage', 'financingTypeCode': None, 'financingType': None, 'interestRate': 622, 'dueDate': None, 'lenderName': 'HSBC MORTGAGE CORPORATION USA', 'loanTerm': '360'}]}}, 'tax': {'taxAmount': 3557.35, 'taxYear': 2021, 'taxRateCodeArea': '303', 'schoolTaxDistrictCodes': ['MCPA&MCPS', 'FIRE DISTRICT']}, 'valuation': {'estimatedValue': 540962.1, 'priceRangeMin': 420436, 'priceRangeMax': 609967, 'standardDeviation': 0.1839, 'confidenceScore': 75, 'asOfDate': '2021-11-13T00:00:00.000Z', 'ltvCurrentEstimatedCombined': 43.2, 'equityCurrentEstimatedBalance': 515202, 'equityPercent': 100}, 'meta': {'importEvents': [], 'propertyDateModified': '2022-03-15T05:59:10.039Z', 'requestId': 'Wm9Sqo1UC'}, 'homeownerAssociations': [{'name': "Highland Ridge Homeowners' Association of Manatee County, Inc.", 'type': 'HOA', 'feeAmount': '540', 'feeFrequency': 'Annual'}]}]
