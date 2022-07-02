@@ -40,3 +40,7 @@
 .map-container {
     height: 300px;
 }
+
+.address input {
+    text-transform: capitalize;
+}

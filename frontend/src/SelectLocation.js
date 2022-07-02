@@ -27,6 +27,7 @@ const SelectLocation = ({ selected, setSelected }) => {
   const [namesLoading, setNamesLoadings] = useState(false);
   const [address, setAddress] = useState(null);
   const [isLocationCorrect, setIsLocationCorrect] = useState(null);
+  const [streetView, setStreetView] = useState(null);
 
   useEffect(() => {
     if (map.current) return;
@@ -43,7 +44,7 @@ const SelectLocation = ({ selected, setSelected }) => {
       popup.current?.remove();
       marker.current?.remove();
 
-      map.current.setCenter([lng, lat]);
+      map.current.setCenter([lng, lat - 0.5]);
       marker.current = new mapboxgl.Marker()
         .setLngLat([lng, lat])
         .addTo(map.current);
@@ -55,14 +56,18 @@ const SelectLocation = ({ selected, setSelected }) => {
       }) // add popups
         .setLngLat([lng, lat])
         .setHTML(
-          `<div><h6 style="font-size:14px">Application Location</h6><p>${selectLocation}</p></div>`
+          `<div>
+          <h6 style="font-size:14px">Application Location</h6><p>${selectLocation}</p>
+          ${streetView ? `<img class="w-100" src='${streetView}' />` : null}
+          
+          </div>`
         )
         .addTo(map.current);
     } else {
       popup.current?.remove();
       marker.current?.remove();
     }
-  }, [lat, lng, selectLocation]);
+  }, [lat, lng, selectLocation, streetView]);
 
   useEffect(() => {
     if (!isLocationCorrect) {
@@ -89,6 +94,14 @@ const SelectLocation = ({ selected, setSelected }) => {
   }, [coords, isGeolocationEnabled]);
 
   const suggestionSelect = (result, lat, lng, text) => {
+    const streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=250x100&location=${lat},${lng}&fov=80&heading=70&pitch=0&key=AIzaSyDt02hklCJb9re6Q3Xi1WMAXRMN_l9_PXo&return_error_code=true`;
+    fetch(streetViewUrl).then((res) => {
+      if (res.status === 404) {
+        setStreetView(null);
+      } else {
+        setStreetView(streetViewUrl);
+      }
+    });
     setSelectLocation(result);
     setIsLocationCorrect(null);
 
@@ -98,7 +111,7 @@ const SelectLocation = ({ selected, setSelected }) => {
 
     const stateAndZip = addr[addr.length - 2].split(" ");
     const zip = stateAndZip[stateAndZip.length - 1];
-    const state = stateAndZip[0].toLowerCase();
+    const state = stateAndZip.slice(0, -1).join(" ").toLowerCase();
     const city = addr[addr.length - 3].toLowerCase();
     let street = "";
     if (addr.length > 3) street = addr[0].toLowerCase();
@@ -155,23 +168,31 @@ const SelectLocation = ({ selected, setSelected }) => {
         <Form.Group className="mb-3 mt-3">
           <Form.Label>Is this the correct location ?</Form.Label>
           <div className="d-flex flex-column mb-3">
-            <Form.Check
-              type={"radio"}
-              label={`Yes`}
-              name="correct"
-              value="1"
-              onChange={(e) => setIsLocationCorrect(e.target.value == 1)}
-            />
-            <Form.Check
-              type={"radio"}
-              label={`No`}
-              name="correct"
-              value="0"
-              onChange={(e) => setIsLocationCorrect(e.target.value == 1)}
-            />
+            <Button
+              className="mt-1"
+              variant={isLocationCorrect ? "primary" : "outline-primary"}
+              onClick={() => {
+                setIsLocationCorrect(true);
+              }}
+            >
+              Yes
+            </Button>
+            <Button
+              className="mt-1"
+              variant={
+                !isLocationCorrect && isLocationCorrect != null
+                  ? "primary"
+                  : "outline-primary"
+              }
+              onClick={() => {
+                setIsLocationCorrect(false);
+              }}
+            >
+              No
+            </Button>
           </div>
           {isLocationCorrect ? (
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column address">
               <div className="d-flex justify-content-between">
                 <div className="px-1">
                   <Form.Label>Address</Form.Label>

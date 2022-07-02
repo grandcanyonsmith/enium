@@ -4,6 +4,7 @@ import { Button, Form } from "react-bootstrap";
 import { useEffect, useRef, useState } from "react";
 const SelectName = ({ setSelected, names, selected, namesLoading }) => {
   const [isValidName, setIsValidName] = useState(true);
+  const [name, setName] = useState(null);
 
   useEffect(() => {
     if (selected) {
@@ -29,9 +30,10 @@ const SelectName = ({ setSelected, names, selected, namesLoading }) => {
               variant={v.full === selected ? "primary" : "outline-primary"}
               onClick={() => {
                 setSelected(v.full);
+                setName(v);
               }}
             >
-              {`${v.first} ${v.middle} ${v.last}`}
+              {`${v.first}${v.middle ? " " + v.middle : ""} ${v.last}`}
             </Button>
           ))}
         </div>
@@ -50,22 +52,22 @@ const SelectName = ({ setSelected, names, selected, namesLoading }) => {
             here
           </a>
         </Form.Label>
-        {!isValidName && (
+        {selected && (
           <div className="d-flex flex-column mt-2">
             <div className="d-flex justify-content-between">
               <div className="px-1">
                 <Form.Label>First Name</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" disabled value={name?.first} />
               </div>
               <div className="px-1">
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control type="text" v />
+                <Form.Control type="text" disabled value={name?.last} />
               </div>
             </div>
             <div className="d-flex justify-content-between mt-1">
               <div className="px-1">
                 <Form.Label>Middle Name</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" disabled value={name?.middle} />
               </div>
             </div>
           </div>
