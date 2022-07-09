@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useEffect, useRef, useState } from "react";
 const SelectName = ({ setSelected, names, selected, namesLoading }) => {
   const [isValidName, setIsValidName] = useState(true);
   const [name, setName] = useState(null);
@@ -40,7 +40,7 @@ const SelectName = ({ setSelected, names, selected, namesLoading }) => {
       </Form.Group>
       <Form.Group className="mb-3 mt-3">
         <Form.Label>
-          I don't see the name of the applicant appearing. Click{" "}
+          Don't see the name of the applicant ? Click{" "}
           <a
             href="#"
             onClick={(e) => {
@@ -59,16 +59,15 @@ const SelectName = ({ setSelected, names, selected, namesLoading }) => {
                 <Form.Label>First Name</Form.Label>
                 <Form.Control type="text" disabled value={name?.first} />
               </div>
-              <div className="px-1">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control type="text" disabled value={name?.last} />
-              </div>
-            </div>
-            <div className="d-flex justify-content-between mt-1">
+
               <div className="px-1">
                 <Form.Label>Middle Name</Form.Label>
                 <Form.Control type="text" disabled value={name?.middle} />
               </div>
+            </div>
+            <div className="px-1">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="text" disabled value={name?.last} />
             </div>
           </div>
         )}

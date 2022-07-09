@@ -1,0 +1,120 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: identity-verification
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.8
+  environment:
+    BUCKET_NAME: asce4s-test-id-bucket
+  timeout: 300
+
+  # you can overwrite defaults here
+  #  stage: dev
+  #  region: us-east-1
+
+  # you can add statements to the Lambda function's IAM Role here
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:*
+          Resource:
+            - "arn:aws:s3:::${self:provider.environment.BUCKET_NAME}/*"
+        - Effect: Allow
+          Action:
+            - textract:*
+          Resource: "*"
+layers:
+  poppler:
+    compatibleRuntimes:
+      - python3.8
+    compatibleArchitectures:
+      - x86_64
+      - arm64
+    package:
+      artifact: poppler.zip
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+# you can add packaging information here
+#package:
+#  patterns:
+#    - '!exclude-me.py'
+#    - '!exclude-me-dir/**'
+#    - include-me.py
+#    - include-me-dir/**
+
+functions:
+  getName:
+    handler: get-name.handler
+    events:
+      - http:
+          path: /getName
+          method: post
+          cors: true
+
+  presignedUrl:
+    handler: generate-presigned-url.handler
+    events:
+      - http:
+          path: /generate-presigned-url/{key}
+          method: get
+          cors: true
+
+  verifyId:
+    handler: verify_id_to_title.handler
+    events:
+      - http:
+          path: /verify_id_to_title
+          method: post
+          cors: true
+
+    environment:
+      BUCKET_NAME: asce4s-test-id-bucket
+
+  verifyIncome:
+    handler: verify_income_amount.handler
+    layers:
+      - !Ref PopplerLambdaLayer
+    events:
+      - http:
+          path: /verify_income_amount
+          method: post
+          cors: true
+
+    environment:
+      BUCKET_NAME: asce4s-test-id-bucket
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
+
+package:
+  patterns:
+    - "!node_modules/**"
+    - "!venv/**"
+
+custom:
+  pythonRequirements:
+    zip: true

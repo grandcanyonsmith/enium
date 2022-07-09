@@ -28,6 +28,7 @@ const SelectLocation = ({ selected, setSelected }) => {
   const [address, setAddress] = useState(null);
   const [isLocationCorrect, setIsLocationCorrect] = useState(null);
   const [streetView, setStreetView] = useState(null);
+  const [streetViewAngle, setStreetViewAngle] = useState(90);
 
   useEffect(() => {
     if (map.current) return;
@@ -44,7 +45,7 @@ const SelectLocation = ({ selected, setSelected }) => {
       popup.current?.remove();
       marker.current?.remove();
 
-      map.current.setCenter([lng, lat - 0.5]);
+      map.current.setCenter([lng, lat - 0.0004]);
       marker.current = new mapboxgl.Marker()
         .setLngLat([lng, lat])
         .addTo(map.current);
@@ -58,7 +59,7 @@ const SelectLocation = ({ selected, setSelected }) => {
         .setHTML(
           `<div>
           <h6 style="font-size:14px">Application Location</h6><p>${selectLocation}</p>
-          ${streetView ? `<img class="w-100" src='${streetView}' />` : null}
+          ${streetView ? `<img class="w-100" src='${streetView}' />` : ""}
           
           </div>`
         )
@@ -94,7 +95,7 @@ const SelectLocation = ({ selected, setSelected }) => {
   }, [coords, isGeolocationEnabled]);
 
   const suggestionSelect = (result, lat, lng, text) => {
-    const streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=250x100&location=${lat},${lng}&fov=80&heading=70&pitch=0&key=AIzaSyDt02hklCJb9re6Q3Xi1WMAXRMN_l9_PXo&return_error_code=true`;
+    const streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=250x100&location=${lat},${lng}&fov=80&heading=${streetViewAngle}&pitch=0&key=AIzaSyDt02hklCJb9re6Q3Xi1WMAXRMN_l9_PXo&return_error_code=true`;
     fetch(streetViewUrl).then((res) => {
       if (res.status === 404) {
         setStreetView(null);
@@ -153,7 +154,7 @@ const SelectLocation = ({ selected, setSelected }) => {
   return (
     <>
       <Form.Group className="mb-3">
-        <Form.Label>Address</Form.Label>
+        <Form.Label>Address *</Form.Label>
         <MapboxAutocomplete
           publicKey="pk.eyJ1IjoiY2FueW9uZnNtaXRoIiwiYSI6ImNsNHB1bnFndTA1ejgzY2xyeWswNHVzaTYifQ.xsqBneXW6U1B-N_jDzrOtg"
           inputClass="form-control search"
@@ -195,21 +196,21 @@ const SelectLocation = ({ selected, setSelected }) => {
             <div className="d-flex flex-column address">
               <div className="d-flex justify-content-between">
                 <div className="px-1">
-                  <Form.Label>Address</Form.Label>
+                  <Form.Label>Address *</Form.Label>
                   <Form.Control disabled type="text" value={address?.street} />
                 </div>
                 <div className="px-1">
-                  <Form.Label>City</Form.Label>
+                  <Form.Label>City *</Form.Label>
                   <Form.Control disabled type="text" value={address?.city} />
                 </div>
               </div>
               <div className="d-flex justify-content-between mt-2">
                 <div className="px-1">
-                  <Form.Label>State</Form.Label>
+                  <Form.Label>State *</Form.Label>
                   <Form.Control disabled type="text" value={address?.state} />
                 </div>
                 <div className="px-1">
-                  <Form.Label>Zip</Form.Label>
+                  <Form.Label>Zip *</Form.Label>
                   <Form.Control disabled type="text" value={address?.zip} />
                 </div>
               </div>
